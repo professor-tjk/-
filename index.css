@@ -1,68 +1,84 @@
-    body {
-    margin: 0;
-    height: 100vh;
-    background: linear-gradient(to bottom, #a3c4f3, #ffffff); /* осмон ба барф */
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    text-shadow: 0 0 5px #000;
-  }
-    /* Навори боло (header) */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-      background-color: #000000;
-      color: white;
-    }
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, #a3c4f3, #ffffff); /* осмон ба барф */
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  text-shadow: 0 0 5px #000;
+  
+  display: flex;          /* илова карда шуд */
+  justify-content: center; /* марказ уфуқӣ */
+  align-items: center;     /* марказ амудӣ */
+  flex-direction: column;  /* агар чизҳои бештар дошта бошем */
+}
 
-    /* Номи сайт */
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
+/* Навори боло (header) */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #000000;
+  color: white;
+  width: 100%;
+  position: absolute; /* барои нишастани болои саҳифа */
+  top: 0;
+}
 
-    /* Қисми тугмаҳо */
-    .nav-buttons {
-      display: flex;
-      gap: 15px;
-    }
+/* Номи сайт */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
 
-    /* Тугмаҳо */
-    .nav-buttons a {
-      background-color: transparent;
-      border: 1px solid white;
-      color: white;
-      padding: 8px 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.3s;
-      text-decoration: none;
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 24px;
-    }
+/* Қисми тугмаҳо */
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
 
-    .nav-buttons a:hover {
-      transform: scale(1.09);
-      border-style: doublefs;
-      background-color: white;
-      color: #111;
-    }
-    
-  .snowflake {
-    position: absolute;
-    top: -10px;
-    color: white;
-    font-size: 1em;
-    user-select: none;
-    pointer-events: none;
-    animation: fall linear infinite;
-  }
+/* Тугмаҳо */
+.nav-buttons a {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 24px;
+}
 
-  @keyframes fall {
-    0% { transform: translateY(0) rotate(0deg); }
-    100% { transform: translateY(100vh) rotate(360deg); }
-  }
+.nav-buttons a:hover {
+  transform: scale(1.09);
+  border-style: double; /* ислоҳ шуд */
+  background-color: white;
+  color: #111;
+}
+
+/* Расм дар марказ */
+.center-image img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Барф */
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: white;
+  font-size: 1em;
+  user-select: none;
+  pointer-events: none;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
