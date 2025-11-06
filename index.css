@@ -1,0 +1,68 @@
+    body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #a3c4f3, #ffffff); /* осмон ба барф */
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-shadow: 0 0 5px #000;
+  }
+    /* Навори боло (header) */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background-color: #000000;
+      color: white;
+    }
+
+    /* Номи сайт */
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    /* Қисми тугмаҳо */
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    /* Тугмаҳо */
+    .nav-buttons a {
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 24px;
+    }
+
+    .nav-buttons a:hover {
+      transform: scale(1.09);
+      border-style: doublefs;
+      background-color: white;
+      color: #111;
+    }
+    
+  .snowflake {
+    position: absolute;
+    top: -10px;
+    color: white;
+    font-size: 1em;
+    user-select: none;
+    pointer-events: none;
+    animation: fall linear infinite;
+  }
+
+  @keyframes fall {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(360deg); }
+  }
